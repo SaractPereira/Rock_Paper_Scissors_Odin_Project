@@ -3,29 +3,25 @@
 <html lang="en">
 
 <head>
-    <title> Rock Paper Scissor</title>
+    <title> Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
-
     <h1>Rock Paper Scissors</h1>
-
-    <p> Player</p>
-
+    <p>Player</p>
     <p>Choose your option:</p>
-
     <button id="rock" class="button">Rock</button>
     <button id="paper" class="button">Paper</button>
     <button id="scissors" class="button">Scissors</button>
-    <div id="player_choice"></div>
-
-    <p> Computer Choice</p>
-
+    <p>Computer Choice</p>
     <div id="computer_choice"></div>
-
+    <div id="player_choice"></div>
+    <div>
+        <p>Player Wins: <span id="player_wins">0</span></p>
+        <p>Computer Wins: <span id="computer_wins">0</span></p>
+    </div>
+    <div id="game_status"></div>
+    <button id="restart" class="button" style="display:none;">Start Again!</button>
     <script src="script.js"></script>
 </body>
-
 </html>
