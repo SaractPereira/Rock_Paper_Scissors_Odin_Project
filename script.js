@@ -7,14 +7,18 @@ const computerWinsSpan = document.getElementById('computer_wins');
 const gameStatusDiv = document.getElementById('game_status');
 const restartButton = document.getElementById('restart');
 
+
 let playerWins = 0;
 let computerWins = 0;
+let gameOver = false;
 
 buttons.forEach(button => {
     button.addEventListener('click', handleButtonClick);
 });
 
 function handleButtonClick() {
+    if (gameOver) return;
+
     const playerSelection = this.id;
     const computerSelection = getComputerChoice();
     const player_choice = playRound(playerSelection, computerSelection);
@@ -30,7 +34,7 @@ function handleButtonClick() {
     playerWinsSpan.textContent = playerWins;
     computerWinsSpan.textContent = computerWins;
 
-    checkGameOver(); // Check if the game is over
+    checkGameOver();
 }
 
 function getComputerChoice() {
@@ -56,17 +60,9 @@ function playRound(playerSelection, computerSelection) {
 
 function checkGameOver() {
     if (playerWins === 5 || computerWins === 5) {
-        // Display "Game Over" message
         gameStatusDiv.textContent = "Game Over";
-
-        // Show the restart button
         restartButton.style.display = "block";
-
-        // Disable the play buttons
-        buttons.forEach(button => {
-            button.removeEventListener('click', handleButtonClick);
-            button.disabled = true;
-        });
+        gameOver = true;
     }
 }
 
@@ -79,10 +75,7 @@ function restartGame() {
     playerWinsSpan.textContent = playerWins;
     computerWinsSpan.textContent = computerWins;
     gameStatusDiv.textContent = "";
+    //restartButton.style.display = "none";
+    gameOver = false;
 
-    // Re-enable the play buttons
-    buttons.forEach(button => {
-        button.addEventListener('click', handleButtonClick);
-        button.disabled = false;
-    });
 }
