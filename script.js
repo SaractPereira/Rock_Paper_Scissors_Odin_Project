@@ -1,4 +1,3 @@
-
 const buttons = document.querySelectorAll('button');
 const playerChoiceDiv = document.getElementById('player_choice');
 const computerChoiceDiv = document.getElementById('computer_choice');
@@ -6,7 +5,7 @@ const playerWinsSpan = document.getElementById('player_wins');
 const computerWinsSpan = document.getElementById('computer_wins');
 const gameStatusDiv = document.getElementById('game_status');
 const restartButton = document.getElementById('restart');
-
+const startButton = document.getElementById('start');
 
 let playerWins = 0;
 let computerWins = 0;
@@ -15,6 +14,14 @@ let gameOver = false;
 buttons.forEach(button => {
     button.addEventListener('click', handleButtonClick);
 });
+
+startButton.addEventListener('click', startGame);
+
+function startGame() {
+    startButton.style.display = "none";
+    restartButton.style.display = "none";
+    restartGame();
+}
 
 function handleButtonClick() {
     if (gameOver) return;
@@ -75,7 +82,7 @@ function restartGame() {
     playerWinsSpan.textContent = playerWins;
     computerWinsSpan.textContent = computerWins;
     gameStatusDiv.textContent = "";
-    //restartButton.style.display = "none";
+    restartButton.style.display = "none";
     gameOver = false;
-
+    startButton.style.display = "block";
 }

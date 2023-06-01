@@ -6,22 +6,37 @@
     <title> Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Rock Paper Scissors</h1>
-    <p>Player</p>
-    <p>Choose your option:</p>
-    <button id="rock" class="button">Rock</button>
-    <button id="paper" class="button">Paper</button>
-    <button id="scissors" class="button">Scissors</button>
-    <p>Computer Choice</p>
-    <div id="computer_choice"></div>
-    <div id="player_choice"></div>
-    <div>
-        <p>Player Wins: <span id="player_wins">0</span></p>
-        <p>Computer Wins: <span id="computer_wins">0</span></p>
+
+<body style="background-color: #d1e3dd;">
+    <div class="title">Rock Paper Scissors</div>
+    <div class="container">
+        <div class="playercontainer">
+            <div class="player">Player</div>
+            <div class="playerbuttons">
+                <button id="rock" class="button">Rock</button>
+                <button id="paper" class="button">Paper</button>
+                <button id="scissors" class="button">Scissors</button>
+            </div>
+        </div>
+        <div class="computercontainer">
+            <div class="computer_choice">Computer</div>
+            <div id="computer_choice" class="computerChoiceAnswer"></div>
+        </div>
     </div>
-    <div id="game_status"></div>
-    <button id="restart" class="button" style="display:none;">Start Again!</button>
+    <div>
+        <div id="player_choice" class="decision"></div>
+        <div class="pontuationcontainer">
+            <div class="pontuation">
+                <div>Player Wins: <span id="player_wins">0</span></div>
+                <div>Computer Wins: <span id="computer_wins">0</span></div>
+            </div>
+            <div id="game_status" class="game_status"></div>
+            <button id="restart" class="button_startagain" style="display:none;">Start Again!</button>
+            <button id="start" class= "newgame"style="display:none;"></button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>

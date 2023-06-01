@@ -1,5 +1,127 @@
-button {
-    font-size: 16px;
-    padding: 10px 20px;
-    margin: 10px;
-  }
+.button {
+  font-size: 20px;
+  font-family: Roboto Arial, Helvetica, sans-serif;
+  color: rgb(239, 107, 26);
+  border-radius: 5px;
+  border-color: white;
+  padding: 10px 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 50px;
+  background-color: #a8f1d9;
+}
+
+.title {
+  color: rgb(239, 107, 26);
+  font-family: Roboto Arial, Helvetica, sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.playercontainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #72e0cc;
+  border-radius: 15px;
+  margin-right: 100px;
+}
+
+.player {
+  color: rgb(239, 107, 26);
+  font-size: 50px;
+  font-family: Roboto Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.playerbuttons {
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.container {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-around;
+}
+
+.computercontainer {
+  background-color: #72e0cc;
+  border-radius: 15px;
+  padding-left: 75px;
+  padding-right: 75px;
+
+}
+
+.computer_choice {
+  display: flex;
+  color: rgb(239, 107, 26);
+  font-size: 50px;
+  font-family: Roboto Arial, Helvetica, sans-serif;
+  margin-top: 20px;
+}
+
+.computerChoiceAnswer {
+  color: rgb(239, 107, 26);
+  font-size: 25px;
+  font-family: Roboto Arial, Helvetica, sans-serif;
+  display: flex;
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 35px;
+}
+
+.decision {
+  display: flex;
+  color: #78ce4a;
+  border-color;
+  font-size: 90px;
+  font-family: Roboto Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.pontuationcontainer {
+  color: rgb(239, 107, 26);
+  font-size: 20px;
+  font-family: Roboto Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.pontuation {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+.game_status {
+  display: flex;
+  justify-content: center;
+  font-size: 100px;
+  color: red;
+}
+
+.button_startagain {
+  font-size: 20px;
+  font-family: Roboto Arial, Helvetica, sans-serif;
+  color: rgb(239, 107, 26);
+  border-radius: 5px;
+  border-color: white;
+  padding: 10px 30px;
+  margin: 50px;
+  margin-left: 10px;
+  background-color: #72e0cc;
+}
+
+.newgame {
+  background-color:  #d1e3dd;
+  border-color:  #d1e3dd;
+  border-style: none;
+}
